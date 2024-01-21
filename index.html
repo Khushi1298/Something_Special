@@ -1,0 +1,60 @@
+<div id="main">
+    <h1>DATE pr chle ?</h1>
+<button id="yes" onclick="yes()">
+    Yes
+</button>
+
+<button id="no" onmouseover="changeposition()" onclick="changeposition()">
+    No
+</button>
+<image height="150px" width="150px"  src="uwu-but.gif"></image>
+<audio src="heeriye_by_arijit_sing.mp3" controls autoplay="false"></audio>
+
+</div>
+
+<style>
+    body{
+        background-color: white;
+    }
+#no {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    transition: 0.2s ease;
+}
+button{
+    background-color:pink;
+    border-radius: 7px;
+    height: 20px;
+    width: 50px;
+}
+</style>
+
+
+<script>
+var no_button = document.getElementById("no");
+
+function changeposition(){
+    console.log(no_button.style.left);
+    let r_left = Math.floor(Math.random() * 1000) % window.screen.width;
+    let r_top = Math.floor(Math.random() * 1000) % window.screen.height;
+
+    no_button.style.left = r_left + "px";
+    no_button.style.top = r_top + 'px';
+    //document.body.innerHTML = "working";
+    console.log(window.screen.width);
+    console.log(window.screen.height);
+}
+
+function yes(){
+    var yeshtml = `
+<h1>Mujhe maloom tha tumhe jana hai :) </h1> <image height="150" width="200px" src="milk-and-mocha-bears.gif"></image>
+<audio src="Lutt Putt Gaya Ringtone Download – Dunki Movie - MobCup.Com.Co.mp3" controls autoplay="false"></audio>   
+`;
+    
+    document.getElementById("main").innerHTML = yeshtml;
+
+}
+
+
+</script>
